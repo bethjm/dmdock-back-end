@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'dmdock_app',
+    # 'settings.py',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dmdock_project.wsgi.application'
 
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
