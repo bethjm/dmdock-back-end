@@ -8,7 +8,7 @@ now = timezone.now
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#there is a seceret key, I can text or email it to you
+SECRET_KEY = 'django-insecure-q=p@1u1)uvyihd8g$s+^jx6gy8$hz@x&nt1sbu#w$+1(*q5sfc'
 
 DEBUG = True
 
@@ -60,7 +60,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'dmdock_project.wsgi.application'
 
 # Parse database configuration from $DATABASE_URL
-db_from_env = dj_database_url.config(default=os.environ.get('postgres://tejjohahdsbcia:4cca5a584f464c7c7982e594613b95aa60e2b1a0b8249fcc38e83e100a9eb539@ec2-44-214-132-149.compute-1.amazonaws.com:5432/d20185dhdoe19d'))
+db_from_env = placeholder
+#text or email me for this
 
 # Update database settings with parsed configuration
 DATABASES = {
