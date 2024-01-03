@@ -8,7 +8,7 @@ now = timezone.now
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-q=p@1u1)uvyihd8g$s+^jx6gy8$hz@x&nt1sbu#w$+1(*q5sfc'
+#there is a seceret key, I can text or email it to you
 
 DEBUG = True
 
