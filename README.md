@@ -10,6 +10,7 @@
 
 <h3>Technologies Used</h3>
   <ul>
+  <li>JWT Auth</li>
   <li>Python </li>
 <li>Django </li>
 <li>PostgreSQL </li>
