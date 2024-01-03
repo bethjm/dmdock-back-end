@@ -1,23 +1,19 @@
+import os
 from pathlib import Path
 from datetime import timedelta
-import os
+import dj_database_url
 from django.utils import timezone
 
 now = timezone.now
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-q=p@1u1)uvyihd8g$s+^jx6gy8$hz@x&nt1sbu#w$+1(*q5sfc'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -29,7 +25,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'dmdock_app',
-    # 'settings.py',
 ]
 
 MIDDLEWARE = [
@@ -45,7 +40,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'dmdock_project.urls'
-
 
 TEMPLATES = [
     {
@@ -65,11 +59,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dmdock_project.wsgi.application'
 
+# Parse database configuration from $DATABASE_URL
+db_from_env = dj_database_url.config(default=os.environ.get('postgres://tejjohahdsbcia:4cca5a584f464c7c7982e594613b95aa60e2b1a0b8249fcc38e83e100a9eb539@ec2-44-214-132-149.compute-1.amazonaws.com:5432/d20185dhdoe19d'))
+
+# Update database settings with parsed configuration
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
-    }
+    'default': db_from_env,
 }
 
 AUTH_PASSWORD_VALIDATORS = [
