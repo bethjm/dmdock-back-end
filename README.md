@@ -1,4 +1,3 @@
-# dmdock-back-end
 # DM Dock
 
 This application was designed with Dungeons and Dragons (D&D) game masters in mind, particularly my partner who runs two D&D games each week. The primary challenge he faced was the inconvenience of managing multiple open programs during game sessions, leading to confusion and system slowdowns on his laptop.
@@ -27,10 +26,8 @@ This application was designed with Dungeons and Dragons (D&D) game masters in mi
 
 - Access the website: [DM Dock](https://dmdock.netlify.app/)
 
-- Explore the backend repository: [DM Dock Back End](https://github.com/bethjm/dmdock-back-end)
+- Explore the frontend repository: [DM Dock Back End](https://github.com/bethjm/dmdock-front-end)
 
 ***User Statistics***
 
 DM Dock currently has 2 active users per month.
-
-Feel free to explore the app and its capabilities, and don't hesitate to provide feedback or contribute to its development. Happy gaming!
